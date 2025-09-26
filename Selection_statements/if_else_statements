@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+/* || - OR
+   && - AND 
+   == - EQUAL
+   != - NOT EQUAL
+   > - GREATER THAN
+   < - LESS THAN
+   >= - GREATER OR EQUAL TO
+   <= LESS THAN OR EQUAL TO  
+*/
+
+/*General syntax of if statement in C:
+if (expression) statement
+
+or if (expression) { statement }
+
+any of the works
+*/
+
+#define MAX_LINES 30
+
+int main(void){
+    int read, line_no = 23;
+    printf("Enter no of lines: ");
+    scanf("%d", &read);
+    if (read == MAX_LINES)
+        line_no = 0;
+    printf(line_no);
+    return 0;
+}
+
+// to test 0 <= i < n we write 0 <= i && i < n
+// the opposite is i < 0 || i >= n
+
+// for compund statements (that take over a line) and best practices put curly braces around your statements after the if conditions.
+
+/* Example
+if (line_no == MAX_LINES) {
+    line_no = 0;
+    page++;
+}
+*/
+
+// we can also use else statement in C.
+// and nested if else 
+
+
